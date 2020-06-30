@@ -19,6 +19,14 @@ export default function Layout({ children, home }: LayoutProps) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/github.min.css"
+        ></link>
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
