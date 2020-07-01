@@ -1,5 +1,5 @@
 ---
-title: "Test Page `code`"
+title: Test Page `code` $\lambda$
 date: "2020-01-01"
 ---
 
@@ -22,6 +22,10 @@ _This is emphasized_
 **This is strong**
 
 Here is some inline math $x = \frac{1}{2}$.
+
+$\lambda$
+
+$$\lambda$$
 
 $$ hi $$
 

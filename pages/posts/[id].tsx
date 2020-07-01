@@ -10,11 +10,11 @@ export default function Post(props: { postData: PostData }) {
   return (
     <Layout>
       <Head>
-        <title>{title}</title>
+        <title>{title.plaintext}</title>
       </Head>
       <article>
         <h1 style={{ textAlign: "center" }}>
-          <PostTitle title={title} />
+          <PostTitle title={title.html} />
         </h1>
         <div style={{ textAlign: "center" }} className={utilStyles.lightText}>
           <Date dateString={date} />

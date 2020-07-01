@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "date-fns": "^2.11.1",
+    "domhandler": "^3.0.0",
+    "domutils": "^2.1.0",
     "gray-matter": "^4.0.2",
+    "htmlparser2": "^4.1.0",
     "markdown-it": "^11.0.0",
     "markdown-it-footnote": "^3.0.2",
     "markdown-it-for-inline": "^0.1.1",

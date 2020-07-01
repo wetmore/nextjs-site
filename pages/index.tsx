@@ -31,8 +31,8 @@ export default function Home(props: HomeProps) {
           .
         </p>
         <p>
-          I am currently looking for work. You can learn more about my by
-          checking out my <a href="/cv.pdf">CV</a>.
+          I am currently looking for work. You can learn more about my
+          experience by checking out my <a href="/cv.pdf">CV</a>.
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -42,7 +42,7 @@ export default function Home(props: HomeProps) {
             <li className={utilStyles.listItem} key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>
-                  <PostTitle title={title} />
+                  <PostTitle title={title.html} />
                 </a>
               </Link>
               <br />
@@ -58,7 +58,7 @@ export default function Home(props: HomeProps) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsMetadata();
+  const allPostsData = await getSortedPostsMetadata();
   return {
     props: {
       allPostsData,
