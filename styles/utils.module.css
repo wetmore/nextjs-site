@@ -1,5 +1,5 @@
 .heading2Xl {
-  font-size: 2.5rem;
+  font-size: 2.53rem;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
@@ -15,18 +15,14 @@
 }
 
 .headingLg {
-  font-size: 1.5rem;
+  font-size: 1.587rem;
   line-height: 1.4;
   margin: 1rem 0;
 }
 
 .headingMd {
-  font-size: 1.2rem;
+  font-size: 1.26rem;
   line-height: 1.5;
-}
-
-.borderCircle {
-  border-radius: 9999px;
 }
 
 .colorInherit {

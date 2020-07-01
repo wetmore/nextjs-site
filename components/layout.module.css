@@ -5,21 +5,112 @@
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  margin-bottom: 4em;
+  padding: 50px 0 70px 0;
+  border-bottom: 1px solid #575757;
+  text-align: center;
 }
 
-.headerImage {
-  width: 6rem;
-  height: 6rem;
+.header .title {
+  font-family: "playfair-sc";
+  font-weight: bold;
+  font-size: 3.17em;
 }
 
-.headerHomeImage {
-  width: 8rem;
-  height: 8rem;
+.header .navi {
+  font-family: "sorts-mill-goudy";
+  font-size: 1.26em;
+  margin-left: -1.26em;
 }
 
-.backToHome {
-  margin: 3rem 0 0;
+.header .navi a {
+  color: black;
+  margin-left: 1.26em;
+}
+
+.header .bird {
+  background-image: url(/images/bird.png);
+  width: 90px;
+  height: 90px;
+  background-size: 100%;
+  float: left;
+  position: absolute;
+  left: 50%;
+  margin-left: -45px;
+  bottom: -45px;
+  background-color: white;
+}
+
+.footer {
+  font-size: 0.79em;
+  border-top: 1px solid #575757;
+  color: #333;
+  margin-top: 1em;
+  padding: 1em 0 1em 0;
+  text-align: right;
+}
+
+.left {
+  float: left;
+}
+
+/* Medium screens */
+@media only screen and (min-width: 850px) and (max-width: 1200px) {
+  /* .main-text {
+    margin-left: -107px;
+    width: 600px;
+  }
+
+  .sidenote {
+    margin-left: 580px;
+  } */
+}
+
+/* Medium and small */
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+  .header {
+    padding: 40px 0 60px 0;
+  }
+
+  .header .bird {
+    width: 65px;
+    height: 65px;
+    margin-left: -32.5px;
+    bottom: -32.5px;
+  }
+}
+
+/* Small screens */
+@media only screen and (min-width: 0px) and (max-width: 850px) {
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* .sidenote {
+    display: none;
+  }
+
+  .footnotes {
+    display: block;
+  } */
+
+  .footer {
+    padding-right: 15px;
+  }
+
+  .footer .left {
+    float: left;
+    padding-left: 15px;
+  }
+
+  /* .main-text {
+    margin-left: 0;
+    width: 100%;
+  } */
+
+  /* .comments {
+    padding: 20px;
+  } */
 }

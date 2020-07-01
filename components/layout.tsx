@@ -3,8 +3,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "[Your Name]";
-export const siteTitle = "Matt Wetmore's Personal Website";
+export const siteTitle = "Matt Wetmore";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,7 +15,7 @@ interface LayoutProps {
  */
 export default function Layout({ children, home }: LayoutProps) {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -41,42 +40,28 @@ export default function Layout({ children, home }: LayoutProps) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+        <div className={styles.title}>Matt Wetmore</div>
+        <div className={styles.navi}>
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/cv.pdf">CV</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/archive.html">Archive</a>
         </div>
-      )}
-    </div>
+        <a href="/where.html">
+          <div className={styles.bird}></div>
+        </a>
+      </header>
+      <main className={styles.content}>{children}</main>
+      <div className={styles.footer}>
+        <span className={styles.left}>
+          <a href="//github.com/wetmore/personal-site">Source</a> on Github
+          (add)
+        </span>
+        <Link href="/colophon">
+          <a>Colophon</a>
+        </Link>
+      </div>
+    </>
   );
 }

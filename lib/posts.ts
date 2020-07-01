@@ -3,10 +3,15 @@ import path from "path";
 import matter from "gray-matter";
 
 import MarkdownIt from "markdown-it";
-import math_plugin from "markdown-it-katex";
-import highlightjs from "markdown-it-highlightjs";
 
-const md = MarkdownIt({ html: true }).use(math_plugin).use(highlightjs);
+const md = MarkdownIt({ html: true, typographer: true })
+  .use(require("markdown-it-katex"))
+  .use(require("markdown-it-highlightjs"))
+  .use(require("markdown-it-footnote"));
+//.use(require("markdown-it-github-headings"), { prefixHeadingIds: false });
+
+//md.renderer.rules.footnote_block_open = () =>
+//  '<h4 class="mt-3">Footnotes</h4>\n';
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -91,6 +96,7 @@ export async function getPostData(id: string): Promise<PostData> {
   //   .process(matterResult.content);
   // const contentHtml = processedContent.toString();
   const contentHtml = md.render(matterResult.content);
+  matterResult.data.title = md.renderInline(matterResult.data.title);
 
   // Combine the data with the id and contentHtml
   return {
