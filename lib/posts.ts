@@ -3,10 +3,11 @@ import path from "path";
 import matter from "gray-matter";
 
 import MarkdownIt from "markdown-it";
+import iterator from "markdown-it-for-inline";
 
 const md = MarkdownIt({ html: true, typographer: true })
   .use(require("markdown-it-katex"))
-  .use(require("markdown-it-highlightjs"))
+  .use(require("../../markdown-it-highlightjs"), { inline: true })
   .use(require("markdown-it-footnote"));
 //.use(require("markdown-it-github-headings"), { prefixHeadingIds: false });
 

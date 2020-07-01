@@ -1,0 +1,63 @@
+@use "sass:math";
+
+/* Colors */
+$black: #333;
+$less-black: #575757;
+$link-color: #40a2f4;
+
+$-n: 3;
+$-r: 2;
+
+/* Typograpy */
+$base-font-size: 18px;
+
+// http://spencermortensen.com/articles/typographic-scale/
+@function scale-rem($i) {
+  @return math.pow($-r, $i/$-n) * 1rem;
+}
+
+@function scale-em($i) {
+  @return math.pow($-r, $i/$-n) * 1em;
+}
+
+// scales in root em.
+$a-2: scale-rem(-6);
+$b-2: scale-rem(-5);
+$c-2: scale-rem(-4);
+
+$a-1: scale-rem(-3);
+$b-1: scale-rem(-2);
+$c-1: scale-rem(-1);
+
+$a0: scale-rem(0);
+$b0: scale-rem(1);
+$c0: scale-rem(2);
+
+$a1: scale-rem(0);
+$b1: scale-rem(1);
+$c1: scale-rem(2);
+
+$a2: scale-rem(3);
+$b2: scale-rem(4);
+$c2: scale-rem(5);
+
+// scales in relative em.
+$A-2: scale-em(-6);
+$B-2: scale-em(-5);
+$C-2: scale-em(-4);
+
+$A-1: scale-em(-3);
+$B-1: scale-em(-2);
+$C-1: scale-em(-1);
+
+$A0: scale-em(0);
+$B0: scale-em(1);
+$C0: scale-em(2);
+
+$A1: scale-em(0);
+$B1: scale-em(1);
+$C1: scale-em(2);
+
+$A2: scale-em(3);
+$B2: scale-em(4);
+$C2: scale-em(5);

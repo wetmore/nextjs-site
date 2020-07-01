@@ -1,39 +1,41 @@
+@use "theme" as *;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 18px;
+  font-size: $base-font-size;
 }
 
 html {
-  border-top: 5px solid #333;
+  border-top: 5px solid $black;
 }
 
 body {
   margin: 0px auto 0px auto;
   width: 800px;
   font-family: "sorts-mill-goudy";
-  color: #333;
+  color: $black;
 }
 
 h1 {
-  font-size: 1.587rem;
-  line-height: 1.587rem;
+  font-size: $c0;
+  line-height: $c0;
   margin: 2rem 0 1rem 0;
 }
 
 h2 {
-  font-size: 1.26rem;
-  line-height: 1.26rem;
-  margin: 2rem 0 1em 0;
+  font-size: $b0;
+  line-height: $b0;
+  margin: 2rem 0 1rem 0;
 }
 
 h3 {
   font-size: 1rem;
   line-height: 1rem;
-  margin: 2rem 0 0.79rem 0;
+  margin: 2rem 0 $c-1 0;
 }
 
 * {
@@ -41,7 +43,7 @@ h3 {
 }
 
 a {
-  color: #40a2f4;
+  color: $link-color;
   text-decoration: none;
 }
 
@@ -50,7 +52,7 @@ a:hover {
 }
 
 p {
-  line-height: 1.587rem;
+  line-height: $C0;
   margin: 1rem 0 1rem 0;
 }
 
@@ -58,6 +60,9 @@ p {
   font-size: 1.1em !important;
 }
 
+// ============================= Code block styles =============================
+
+/* code when it shows up in a heading */
 h1 code,
 h2 code,
 h3 code {
@@ -68,45 +73,50 @@ h3 code {
 
 /* inline code */
 code {
-  font-size: 0.79em;
+  font-size: $C-1;
   background: #e8e8e8;
-  padding: 0.31em 0.396em 0.31em 0.396em;
-  border-radius: 0.396em;
+  padding: $A-2 $B-2;
+  border-radius: $B-2;
 }
 
 /* code block */
 pre code.hljs {
   margin: 0 1em 0 1em;
-  font-size: 0.79em;
-  padding: 0.31em 0.5em 0.396em 0.5em;
+  font-size: $C-1;
+  padding: $B-2 $A-1 $C-2 $A-1;
   background: #e8e8e8;
   overflow: auto;
-  border-radius: 0.396em;
+  border-radius: $C-2;
 }
 
+/* "code output" code blocks */
 pre code.language-output.hljs {
   margin: 0 40px 0 20px;
-  padding: 0.5em;
-  padding-left: 1.587em;
+  padding: $A-1;
+  padding-left: $B0;
   overflow: auto;
   background: none;
 }
 
+// Label the output code block
 pre code.language-output.hljs::before {
   font-family: "sorts-mill-goudy";
   font-size: 1em;
-  margin-left: -1.587em;
+  margin-left: -$B0;
   content: "Code output:\A\A";
   white-space: pre;
 }
 
-.language-output code {
-  background-color: inherit;
+// ================================= Footnotes =================================
+
+ol.footnotes-list {
+  font-size: $c-1;
+  padding: 0 2em;
 }
 
 .footnotes-sep {
   border: none;
-  border-bottom: 1px solid #575757;
+  border-bottom: 1px solid $less-black;
 }
 
 img {
@@ -114,10 +124,12 @@ img {
   display: block;
 }
 
+// =============================== Media queries ===============================
+
 /* Medium screens */
 @media only screen and (min-width: 850px) and (max-width: 1200px) {
   body {
-    width: 600px;
+    width: 630px;
   }
 }
 
@@ -135,9 +147,7 @@ img {
   }
 }
 
-/*
- * Fonts
- */
+// =================================== Fonts ===================================
 
 @font-face {
   font-family: "sorts-mill-goudy";
