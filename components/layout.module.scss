@@ -1,5 +1,5 @@
 @use "sass:math";
-@use "../styles/theme";
+@use "../styles/theme" as *;
 
 $bird-prop-below-sep: -2/5;
 
@@ -13,7 +13,7 @@ $bird-prop-below-sep: -2/5;
   position: relative;
   margin-bottom: 4em;
   padding: 50px 0 70px 0;
-  border-bottom: 1px solid theme.$less-black;
+  border-bottom: 1px solid $less-black;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@ $bird-prop-below-sep: -2/5;
 }
 
 .header .navi a {
-  color: black;
+  color: $less-black;
   margin-left: 1.26em;
 }
 
@@ -49,8 +49,8 @@ $bird-prop-below-sep: -2/5;
 
 .footer {
   font-size: 0.79em;
-  border-top: 1px solid theme.$less-black;
-  color: theme.$black;
+  border-top: 1px solid $less-black;
+  color: $less-black;
   margin-top: 1em;
   padding: 1em 0 1em 0;
   text-align: right;

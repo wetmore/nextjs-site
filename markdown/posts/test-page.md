@@ -5,6 +5,8 @@ date: "2020-01-01"
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
+[Here is a link, internal](/about)
+
 # H1 Test
 
 Yadda yadda yadda

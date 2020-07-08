@@ -1,13 +1,14 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsMetadata, PostMetadata } from "../lib/posts";
+import { getSortedPostsMetadata } from "../lib/posts";
+import { PageMetadata } from "../lib/mdPage";
 import Link from "next/link";
 import Date from "../components/date";
 import PostTitle from "../components/postTitle";
 
 interface HomeProps {
-  allPostsData: PostMetadata[];
+  allPostsData: PageMetadata[];
 }
 
 export default function Home(props: HomeProps) {
@@ -18,13 +19,19 @@ export default function Home(props: HomeProps) {
       </Head>
       <section>
         <p>
-          I am a person who knows a lot about a little and a little about a lot.
-          My primary interests are making, learning, and climbing. If you'd like
-          to know more about me, check out the{" "}
+          Hello! As you may have guessed, my name is Matt Wetmore. Over the
+          course of my life I've been interested in many different things, but
+          right now my biggest interests are programming and rock climbing.
+          Sometimes I write about{" "}
+          <Link href="/archive">
+            <a>here</a>
+          </Link>
+          . If you'd like to know more about who I am, you should check out my{" "}
           <Link href="/about">
             <a>about page</a>
           </Link>
-          . If you'd like to know what I've done, check out the{" "}
+          . If you'd like to know more about some things I've worked on, check
+          out the{" "}
           <Link href="/projects">
             <a>projects page</a>
           </Link>
@@ -35,11 +42,11 @@ export default function Home(props: HomeProps) {
           experience by checking out my <a href="/cv.pdf">CV</a>.
         </p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+      <section>
+        <h1>Writing</h1>
         <ul className={utilStyles.list}>
           {props.allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>
                   <PostTitle title={title.html} />

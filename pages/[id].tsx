@@ -1,10 +1,10 @@
-import MdPage from "../../components/mdPage";
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import MdPage from "../components/mdPage";
+import { getAllPageIds, getPageData } from "../lib/mdPage";
 
 export default MdPage;
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = getAllPageIds("");
   return {
     paths,
     fallback: false,
@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id as string);
+  const postData = await getPageData(params.id as string);
   return {
     props: {
       postData,

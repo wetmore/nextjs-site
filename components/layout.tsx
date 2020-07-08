@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "./layout.module.scss";
-import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 export const siteTitle = "Matt Wetmore";
@@ -43,23 +42,22 @@ export default function Layout({ children, home }: LayoutProps) {
         <div className={styles.title}>Matt Wetmore</div>
         <div className={styles.navi}>
           <a href="/">Home</a>
-          <a href="/about.html">About</a>
+          <a href="/about">About</a>
           <a href="/cv.pdf">CV</a>
-          <a href="/projects.html">Projects</a>
-          <a href="/archive.html">Archive</a>
+          <a href="/projects">Projects</a>
+          <a href="/archive">Archive</a>
         </div>
-        <a href="/where.html">
+        <a href="/where">
           <div className={styles.bird}></div>
         </a>
       </header>
       <main className={styles.content}>{children}</main>
       <div className={styles.footer}>
         <span className={styles.left}>
-          <a href="//github.com/wetmore/personal-site">Source</a> on Github
-          (add)
+          <a href="//github.com/wetmore/">Source</a> on Github (add)
         </span>
         <Link href="/colophon">
-          <a>Colophon</a>
+          <a>About this website</a>
         </Link>
       </div>
     </>
