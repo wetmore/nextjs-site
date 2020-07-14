@@ -2,7 +2,7 @@ import fs from "fs";
 import path, { parse } from "path";
 import matter from "gray-matter";
 import { md, mdTitle, htmlParser } from "./parsers";
-import { findOne, getText, removeElement } from "domutils";
+import { getText, removeElement, findAll } from "domutils";
 
 export const markdownDir = path.join(process.cwd(), "markdown");
 
@@ -52,16 +52,15 @@ export async function renderTitle(raw: string): Promise<PageTitle> {
   // because bumping the version messed up some math rendering for some reason.
   let dom = await htmlParser(html);
 
-  const mathml = findOne(
+  const mathml = findAll(
     (el) => {
       return el.attribs["class"] === "katex-mathml";
     },
-    dom instanceof Array ? dom : [dom],
-    true
+    dom instanceof Array ? dom : [dom]
   );
 
-  if (mathml) {
-    removeElement(mathml);
+  for (let el of mathml) {
+    removeElement(el);
   }
 
   const plaintext = getText(dom);
