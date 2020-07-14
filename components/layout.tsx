@@ -45,11 +45,9 @@ export default function Layout({ children, home }: LayoutProps) {
           <a href="/about">About</a>
           <a href="/cv.pdf">CV</a>
           <a href="/projects">Projects</a>
-          <a href="/archive">Archive</a>
+          <a href="/posts">Posts</a>
         </div>
-        <a href="/where">
-          <div className={styles.bird}></div>
-        </a>
+        <div className={styles.bird}></div>
       </header>
       <main className={styles.content}>{children}</main>
       <div className={styles.footer}>
