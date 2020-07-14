@@ -1,0 +1,15 @@
+@use "../styles/theme" as *;
+
+.post {
+  margin-bottom: 1em;
+}
+
+.post:last-child {
+  margin-bottom: $c-1;
+}
+
+.postList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

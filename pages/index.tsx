@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
+import PostList from "../components/postList";
 import { getSortedPostsMetadata } from "../lib/posts";
 import { PageMetadata } from "../lib/mdPage";
 import Link from "next/link";
-import Date from "../components/date";
-import PostTitle from "../components/postTitle";
 
 interface HomeProps {
   allPostsData: PageMetadata[];
@@ -44,21 +42,7 @@ export default function Home(props: HomeProps) {
       </section>
       <section>
         <h1>Writing</h1>
-        <ul className={utilStyles.list}>
-          {props.allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>
-                  <PostTitle title={title.html} />
-                </a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
+        <PostList postsData={props.allPostsData}></PostList>
       </section>
     </Layout>
   );
