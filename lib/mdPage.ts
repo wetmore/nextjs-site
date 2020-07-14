@@ -79,6 +79,7 @@ export function getAllPageIds(root: string) {
   return fileNames
     .filter((fileName) => fileName.endsWith(".md"))
     .map((fileName) => {
+      console.log(fileName);
       return {
         params: {
           id: fileName.replace(/\.md$/, ""),
@@ -90,7 +91,7 @@ export function getAllPageIds(root: string) {
 /**
  * Get all page data for a particular page.
  *
- * @param id Post identifier, e.g. "about" or "posts/my-post"
+ * @param id Page identifier, e.g. "about" or "posts/my-post"
  */
 export async function getPageData(id: string): Promise<PageData> {
   const fullPath = path.join(markdownDir, `${id}.md`);

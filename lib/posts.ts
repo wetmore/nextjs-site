@@ -19,24 +19,26 @@ export async function getSortedPostsMetadata(): Promise<PageMetadata[]> {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = await Promise.all(
-    fileNames.map(async (fileName) => {
-      // Remove ".md" from file name to get id
-      const id = fileName.replace(/\.md$/, "");
+    fileNames
+      .filter((fileName) => fileName.endsWith(".md"))
+      .map(async (fileName) => {
+        // Remove ".md" from file name to get id
+        const id = fileName.replace(/\.md$/, "");
 
-      // Read markdown file as string
-      const fullPath = path.join(postsDirectory, fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
+        // Read markdown file as string
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, "utf8");
 
-      // Use gray-matter to parse the post metadata section
-      const matterResult = matter(fileContents);
+        // Use gray-matter to parse the post metadata section
+        const matterResult = matter(fileContents);
 
-      // Render the title
-      const title = await renderTitle(matterResult.data.title);
-      const date = matterResult.data.date as string;
+        // Render the title
+        const title = await renderTitle(matterResult.data.title);
+        const date = matterResult.data.date as string;
 
-      // Combine the data with the id
-      return { id, date, title };
-    })
+        // Combine the data with the id
+        return { id, date, title };
+      })
   );
 
   // Sort posts by date

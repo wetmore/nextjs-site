@@ -39,7 +39,7 @@ export default function Home(props: HomeProps) {
         </p>
         <p>
           I am currently looking for work. You can learn more about my
-          experience by checking out my <a href="/cv.pdf">CV</a>.
+          experience by checking out my <a href="/files/resume.pdf">resume</a>.
         </p>
       </section>
       <section>

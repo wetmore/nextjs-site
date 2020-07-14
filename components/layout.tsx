@@ -43,7 +43,7 @@ export default function Layout({ children, home }: LayoutProps) {
         <div className={styles.navi}>
           <a href="/">Home</a>
           <a href="/about">About</a>
-          <a href="/cv.pdf">CV</a>
+          <a href="/files/resume.pdf">Resume</a>
           <a href="/projects">Projects</a>
           <a href="/posts">Posts</a>
         </div>
