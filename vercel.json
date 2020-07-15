@@ -1,0 +1,22 @@
+{
+  "redirects": [
+    { "source": "/about.html", "destination": "/about" },
+    { "source": "/projects.html", "destination": "/projects" },
+    {
+      "source": "/posts/hakyll-list-metadata.html",
+      "destination": "/posts/hakyll-list-metadata"
+    },
+    {
+      "source": "/posts/n-choose-k-the-haskell-way.html",
+      "destination": "/posts/n-choose-k-the-haskell-way"
+    },
+    {
+      "source": "/posts/parsing-combinators-with-parser-combinators.html",
+      "destination": "/posts/parsing-combinators-with-parser-combinators"
+    },
+    {
+      "source": "/posts/hakyll-custom-writer.html",
+      "destination": "/posts/hakyll-custom-writer"
+    }
+  ]
+}
