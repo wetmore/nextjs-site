@@ -99,7 +99,7 @@ export default function Layout({ children, home }: LayoutProps) {
       <main className={styles.content}>{children}</main>
       <div className={styles.footer}>
         <span className={styles.left}>
-          <a href="//github.com/wetmore/">Source</a> on Github (add)
+          <a href="//github.com/wetmore/nextjs-site">Source</a> on Github
         </span>
         <Link href="/colophon">
           <a>About this website</a>
