@@ -6,13 +6,13 @@ import { DomHandler, Node } from "domhandler";
 
 export const md = MarkdownIt({ html: true, typographer: true })
   .use(require("markdown-it-katex"))
-  .use(require("../../markdown-it-highlightjs"), { inline: true })
+  .use(require("markdown-it-highlightjs"), { inline: true })
   .use(require("markdown-it-footnote"));
 //.use(require("markdown-it-github-headings"), { prefixHeadingIds: false });
 
 export const mdTitle = MarkdownIt({ html: false, typographer: true })
   .use(require("markdown-it-katex"))
-  .use(require("../../markdown-it-highlightjs"), { inline: false })
+  .use(require("markdown-it-highlightjs"), { inline: false })
   .use(require("markdown-it-footnote"));
 
 const parseHtml = (rawHtml: string, cb: (err, dom: Node | Node[]) => void) => {
