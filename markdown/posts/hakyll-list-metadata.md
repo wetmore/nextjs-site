@@ -147,4 +147,4 @@ scripts: /js/custom.js, http://greatlibraryjs.com/source.js
 
 [^3]: The `<>` is the infix operator for `mappend`, the combining operation for
   monoids. `Context` is an instance of the [`Monoid` typeclass](http://hackage.haskell.org/package/base-4.7.0.1/docs/Data-Monoid.html) - combining two contexts returns a context with fields from both, with the left
-  context's fields getting precendence. 
+  context's fields getting precedence. 
