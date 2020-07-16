@@ -4,6 +4,20 @@ title: Projects
 
 ## Programming
 
+### Circles.lol
+
+Work in progress tool to create art with circle packings.
+
+<a href="/images/example2.png"><img src="/images/example2.png"></img></a>
+80k circles
+
+<a href="/images/example3.png"><img src="/images/example3.png"></img></a>
+10k circles
+
+Circles are rendered with webgl to support animating color interpolations of
+tens of thousands of circles at 60fps on standard hardware.
+View at [circles.lol](//circles.lol) or see the [code](//github.com/wetmore/circles).
+
 ### Professor Liar subject generator
 
 Simple javascript generator of [Professor Liar](http://www.theweinerworks.com/?p=1642)
