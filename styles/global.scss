@@ -132,7 +132,7 @@ img {
 // =============================== Media queries ===============================
 
 /* Medium screens */
-@media only screen and (min-width: 850px) and (max-width: 1200px) {
+@media only screen and (min-width: 630px) and (max-width: 1200px) {
   body {
     width: 630px;
   }
@@ -146,7 +146,7 @@ img {
 }
 
 /* Small screens */
-@media only screen and (min-width: 0px) and (max-width: 850px) {
+@media only screen and (min-width: 0px) and (max-width: 630px) {
   body {
     width: 100%;
   }

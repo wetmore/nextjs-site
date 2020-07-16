@@ -3,12 +3,6 @@
 
 $bird-prop-below-sep: -2/5;
 
-.container {
-  max-width: 36rem;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
-}
-
 .header {
   position: relative;
   margin-bottom: 4em;
@@ -60,46 +54,12 @@ $bird-prop-below-sep: -2/5;
   float: left;
 }
 
-/* Medium screens */
-@media only screen and (min-width: 850px) and (max-width: 1200px) {
-  /* .main-text {
-    margin-left: -107px;
-    width: 600px;
-  }
-
-  .sidenote {
-    margin-left: 580px;
-  } */
-}
-
-/* Medium and small */
-@media only screen and (min-width: 0px) and (max-width: 1200px) {
-  .header {
-    padding: 40px 0 60px 0;
-  }
-
-  .header .bird {
-    width: 65px;
-    height: 65px;
-    margin-left: -32.5px;
-    bottom: $bird-prop-below-sep * 65px;
-  }
-}
-
-/* Small screens */
-@media only screen and (min-width: 0px) and (max-width: 850px) {
+/* --------------------------- RESPONSIVE CONTENT --------------------------- */
+@media only screen and (min-width: 0px) and (max-width: 630px) {
   .content {
     padding-left: 20px;
     padding-right: 20px;
   }
-
-  /* .sidenote {
-    display: none;
-  }
-
-  .footnotes {
-    display: block;
-  } */
 
   .footer {
     padding-right: 15px;
@@ -110,12 +70,98 @@ $bird-prop-below-sep: -2/5;
     padding-left: 15px;
   }
 
-  /* .main-text {
-    margin-left: 0;
-    width: 100%;
-  } */
-
   /* .comments {
     padding: 20px;
   } */
+
+  /* .sidenote {
+    display: none;
+  }
+
+  .footnotes {
+    display: block;
+  } */
+}
+
+/* ---------------------------- RESPONSIVE BIRD ---------------------------- */
+
+@media only screen and (min-width: 400px) and (max-width: 1200px) {
+  .header {
+    padding: 35px 0 55px 0;
+    margin-bottom: 3em;
+  }
+
+  .header .bird {
+    width: 65px;
+    height: 65px;
+    margin-left: -32.5px;
+    bottom: $bird-prop-below-sep * 65px;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .header {
+    padding: 25px 0 45px 0;
+    margin-bottom: 2em;
+  }
+
+  .header .bird {
+    width: 45px;
+    height: 45px;
+    margin-left: -22.5px;
+    bottom: $bird-prop-below-sep * 45px;
+  }
+}
+
+/* --------------------------- RESPONSIVE HEADER --------------------------- */
+
+@media only screen and (min-width: 430px) and (max-width: 550px) {
+  .header .title {
+    font-size: $b2;
+  }
+
+  .header .navi {
+    font-family: "sorts-mill-goudy";
+    font-size: 1em;
+    margin-left: -1em;
+  }
+
+  .header .navi a {
+    color: $less-black;
+    margin-left: 1em;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 430px) {
+  .header .title {
+    font-size: $a2;
+  }
+
+  .header .navi {
+    font-family: "sorts-mill-goudy";
+    font-size: 1em;
+    margin-left: -$c-1;
+  }
+
+  .header .navi a {
+    color: $less-black;
+    margin-left: $c-1;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 360px) {
+  .header .title {
+    font-size: $c1;
+  }
+
+  .header .navi {
+    font-family: "sorts-mill-goudy";
+    font-size: $c-1;
+    margin-left: -$b-1;
+  }
+
+  .header .navi a {
+    color: $less-black;
+    margin-left: $b-1;
+  }
 }

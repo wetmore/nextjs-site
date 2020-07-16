@@ -72,10 +72,7 @@ export default function Layout({ children, home }: LayoutProps) {
           rel="stylesheet"
           href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/github.min.css"
         ></link>
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="Matt Wetmore's Personal Website" />
         <meta
           property="og:image"
           content={`https://og-image.now.sh/${encodeURI(
@@ -84,6 +81,10 @@ export default function Layout({ children, home }: LayoutProps) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1,user-scalable=no"
+        ></meta>
       </Head>
       <header className={styles.header}>
         <div className={styles.title}>Matt Wetmore</div>
