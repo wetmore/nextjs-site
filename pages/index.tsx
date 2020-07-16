@@ -20,11 +20,8 @@ export default function Home(props: HomeProps) {
           Hello! As you may have guessed, my name is Matt Wetmore. Over the
           course of my life I've been interested in many different things, but
           right now my biggest interests are programming and rock climbing.
-          Sometimes I write about{" "}
-          <Link href="/archive">
-            <a>here</a>
-          </Link>
-          . If you'd like to know more about who I am, you should check out my{" "}
+          Sometimes I write about my interests; you can find blog posts below.
+          If you'd like to know more about who I am, you should check out my{" "}
           <Link href="/about">
             <a>about page</a>
           </Link>
